@@ -14,9 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var test = BankVault(name: "Chase", address: "Broadway")
+        
+        var allowAccess = test.allowEntryWithPassword([2,4,6,8])
+        
+        print(allowAccess)
+        
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
